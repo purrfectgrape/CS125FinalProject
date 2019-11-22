@@ -7,12 +7,47 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World by Rohit Giang"
+        android:id="@+id/stylistImage"
+        android:layout_width="228dp"
+        android:layout_height="70dp"
+        android:autoText="false"
+        android:clickable="false"
+        android:text="STYLIST"
+        android:textSize="50sp"
+        app:fontFamily="monospace"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
+    <Button
+        android:id="@+id/myCloset"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:background="#00882D2D"
+        android:drawableTop="@mipmap/ic_launcher_round"
+        android:text="My Closet"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <Button
+        android:id="@+id/buildOutfit"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:drawableTop="@mipmap/ic_launcher_round"
+        android:text="Build Outfit"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="216dp" />
+
+    <Button
+        android:id="@+id/outfitLogbook"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        android:drawableTop="@mipmap/ic_launcher"
+        android:text="Outfit Logbook"
+        tools:layout_editor_absoluteX="153dp"
+        tools:layout_editor_absoluteY="376dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
