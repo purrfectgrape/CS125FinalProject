@@ -8,7 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+
+    /**
+     * Button myClosetButton - refrence to the ClosetButton.
+     */
     private Button myClosetButton;
+
+    /**
+     * Button buildOutfit - refrence to buildOutfit.
+     */
+    private Button myBuildOutfit;
+
+    /**
+     * Button outfitLogbook - refrence to outfitLogBook.
+     */
+    private Button myOutfitLogbook;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +36,40 @@ public class MainActivity extends AppCompatActivity {
                 openMyCloset();
             }
         });
+
+        myBuildOutfit = (Button) findViewById(R.id.buildOutfit);
+        myBuildOutfit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openBuildOutfit();
+
+            }
+        });
+
+
+        myOutfitLogbook = (Button) findViewById(R.id.outfitLogbook);
+        myOutfitLogbook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openOutfitLogbook();
+
+            }
+        });
     }
 
     public void openMyCloset() {
-        Intent intent = new Intent(this, MyCloset.class);
-        startActivity(intent);
+        Intent intentMyCloset = new Intent(this, MyCloset.class);
+        startActivity(intentMyCloset);
+    }
+
+
+    public void openBuildOutfit() {
+        Intent intentBuildOutfit = new Intent(this, BuildOutfit.class);
+        startActivity(intentBuildOutfit);
+    }
+
+    public void openOutfitLogbook() {
+        Intent intentOutfitLoogBook = new Intent(this, OutfitLogbook.class);
+        startActivity(intentOutfitLoogBook);
     }
 }
