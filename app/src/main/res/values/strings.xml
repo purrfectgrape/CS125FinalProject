@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">My First App</string>
+    <string name="app_name">CS125Final</string>
+    <string name="stylist">STYLIST</string>
+    <string name="mycloset">My Closet</string>
+    <string name="buildoutfit">Build Outfit</string>
+    <string name="outfitlogbook">Outfit Logbook</string>
 </resources>
