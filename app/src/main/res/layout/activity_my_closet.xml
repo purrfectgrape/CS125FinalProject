@@ -6,4 +6,67 @@
     android:layout_height="match_parent"
     tools:context=".MyCloset">
 
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:layout_editor_absoluteY="48dp">
+
+        <Button
+            android:id="@+id/hatsButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/hats" />
+
+        <Button
+            android:id="@+id/topButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/tops"/>
+
+        <Button
+            android:id="@+id/bottomButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/bottoms" />
+
+        <Button
+            android:id="@+id/shoesButton"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/shoes" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/outerwear" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/drawers" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="@string/accessories" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

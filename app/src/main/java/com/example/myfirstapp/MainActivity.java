@@ -10,17 +10,17 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     /**
-     * Button myClosetButton - refrence to the ClosetButton.
+     * Button myClosetButton - reference to the ClosetButton.
      */
     private Button myClosetButton;
 
     /**
-     * Button buildOutfit - refrence to buildOutfit.
+     * Button buildOutfit - reference to buildOutfit.
      */
     private Button myBuildOutfit;
 
     /**
-     * Button outfitLogbook - refrence to outfitLogBook.
+     * Button outfitLogbook - reference to outfitLogBook.
      */
     private Button myOutfitLogbook;
 
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         myClosetButton = (Button) findViewById(R.id.myCloset);
         myClosetButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 openMyCloset();
             }
         });
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openOutfitLogbook() {
-        Intent intentOutfitLoogBook = new Intent(this, OutfitLogbook.class);
-        startActivity(intentOutfitLoogBook);
+        Intent intentOutfitLogBook = new Intent(this, OutfitLogbook.class);
+        startActivity(intentOutfitLogBook);
     }
 }
