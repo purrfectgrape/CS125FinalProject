@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OutfitLogbook"></activity>
+        <activity android:name=".Weather"></activity>
+        <activity android:name=".OutfitLogbook" />
         <activity android:name=".BuildOutfit" />
         <activity android:name=".MyCloset" />
         <activity android:name=".MainActivity">
