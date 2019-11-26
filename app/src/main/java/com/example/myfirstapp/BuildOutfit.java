@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class BuildOutfit extends AppCompatActivity {
 
@@ -17,13 +18,13 @@ public class BuildOutfit extends AppCompatActivity {
     /**
      * Button weather - reference to the weather Button.
      */
-//    private Button weather;
+    private ImageButton weatherButton;
 
     /**
      * Button mood - reference to the mood Button.
      * Picture was taken from https://icon-library.net/icon/mood-icon-0.html.
      */
-//    private Button mood;
+//    private ImageButton mood;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,13 +39,13 @@ public class BuildOutfit extends AppCompatActivity {
             }
         });
 
-//        weather = (Button) findViewById(R.id.weather);
-//        weather.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                goToWeather();
-//            }
-//        });
+        weatherButton = (ImageButton) findViewById(R.id.weather);
+        weatherButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToWeather();
+            }
+        });
     }
 
     public void goBack() {
@@ -52,8 +53,8 @@ public class BuildOutfit extends AppCompatActivity {
         startActivity(intentGoBack);
     }
 
-//    public void goToWeather() {
-//        Intent intentGoToWeather = new Intent(this, Weather.class);
-//        startActivity(intentGoToWeather);
-//    }
+    public void goToWeather() {
+        Intent intentGoToWeather = new Intent(this, Weather.class);
+        startActivity(intentGoToWeather);
+    }
 }
