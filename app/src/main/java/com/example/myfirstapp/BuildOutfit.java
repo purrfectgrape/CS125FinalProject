@@ -11,12 +11,8 @@ import android.widget.ImageButton;
 public class BuildOutfit extends AppCompatActivity {
 
     /**
-     * Button backButton - reference to the backButton.
-     */
-    private Button backButton;
-
-    /**
      * Button weather - reference to the weather Button.
+     * Picture was taken from https://www.iconfinder.com/icons/3840014/cloud_color_icons_snow_sun_weather_icon.
      */
     private ImageButton weatherButton;
 
@@ -31,14 +27,6 @@ public class BuildOutfit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_build_outfit);
 
-        backButton = (Button) findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goBack();
-            }
-        });
-
         weatherButton = (ImageButton) findViewById(R.id.weather);
         weatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,11 +34,6 @@ public class BuildOutfit extends AppCompatActivity {
                 goToWeather();
             }
         });
-    }
-
-    public void goBack() {
-        Intent intentGoBack = new Intent(this, MainActivity.class);
-        startActivity(intentGoBack);
     }
 
     public void goToWeather() {

@@ -9,26 +9,10 @@ import android.widget.Button;
 
 public class OutfitLogbook extends AppCompatActivity {
 
-    /**
-     * Button backButton - reference to the backButton.
-     */
-    private Button backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_outfit_logbook);
-
-        backButton = (Button) findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                goBack();
-            }
-        });
-    }
-    public void goBack() {
-        Intent intentGoBack = new Intent(this, MainActivity.class);
-        startActivity(intentGoBack);
     }
 }
