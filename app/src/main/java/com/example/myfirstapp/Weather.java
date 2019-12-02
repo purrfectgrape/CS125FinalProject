@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -28,9 +29,6 @@ public class Weather extends AppCompatActivity {
     /** TextView to hold weather's description. */
     private TextView weatherDescription;
 
-    /** Reference to the weather description. */
-    private TextView description;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +38,8 @@ public class Weather extends AppCompatActivity {
     }
 
     /**
-     * Method to get weather info from openweathermap.
+     * Method to get weather info from openweathermap. This code was adapted from:
+     * https://www.youtube.com/watch?v=8-7Ip6xum6E.
      */
     public void getWeather() {
 
@@ -59,12 +58,14 @@ public class Weather extends AppCompatActivity {
                     weatherDescription.setText(descriptionString);
                 } catch (Exception e) {
                     System.out.println(e);
+                    Log.d("exception", "this is me");
                 }
                 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("WTF", "wohoo");
                 error.printStackTrace();
             }
         });
