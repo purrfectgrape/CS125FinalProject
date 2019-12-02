@@ -6,4 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".MyCloset">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/drawersButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawers" />
+
+        <Button
+            android:id="@+id/accessoriesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accessories" />
+
+        <Button
+            android:id="@+id/hatsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hats" />
+
+        <Button
+            android:id="@+id/outerWearButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Outer Wear" />
+
+        <Button
+            android:id="@+id/topsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tops" />
+
+        <Button
+            android:id="@+id/bottomsButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bottoms" />
+
+        <Button
+            android:id="@+id/shoeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shoes" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
