@@ -4,4 +4,12 @@
     <string name="mycloset">My Closet</string>
     <string name="buildoutfit">Build Outfit</string>
     <string name="outfitlogbook">Outfit Logbook</string>
+    <string name="hats">My Hats</string>
+    <string name="tops">My Tops</string>
+    <string name="bottoms">My Bottoms</string>
+    <string name="outerwear">My Outerwear</string>
+    <string name="accessories">My Accessories</string>
+    <string name="drawers">My Drawer</string>
+    <string name="shoes">My Shoes</string>
+    <string name="back">Back</string>
 </resources>
