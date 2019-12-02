@@ -19,7 +19,7 @@ public class Clothing {
     }
 
     public Color getColor() {
-        return this.color; 
+        return this.color;
     }
 
 }
