@@ -20,7 +20,7 @@
             android:id="@+id/myCloset"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="@drawable/clothes"
+            android:background="@drawable/neckties"
             android:gravity="bottom|right"
             android:text="@string/mycloset" />
 
