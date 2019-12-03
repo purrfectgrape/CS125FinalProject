@@ -29,6 +29,9 @@ public class Weather extends AppCompatActivity {
     /** TextView to hold weather's description. */
     private TextView weatherDescription;
 
+    /** TextView to hold advice based on the temperature. */
+    private TextView temperatureAdvice;
+
     /** Spinner to store a dropdown of cities. */
     private Spinner citySpinner;
 
@@ -37,6 +40,7 @@ public class Weather extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather);
         weatherDescription = (TextView) findViewById(R.id.description);
+        temperatureAdvice = (TextView) findViewById(R.id.temperatureAdvice);
         getWeather();
     }
 
@@ -56,7 +60,8 @@ public class Weather extends AppCompatActivity {
                     JSONArray weatherArray = response.getJSONArray("weather");
                     JSONObject weatherOb = weatherArray.getJSONObject(0);
                     String descriptionString = weatherOb.getString("description");
-                    returnAdvice(descriptionString);
+                    advice(descriptionString);
+                    tempAdvice(temperature);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -72,7 +77,7 @@ public class Weather extends AppCompatActivity {
         newRequest.add(objectRequest);
     }
 
-    public void returnAdvice(String condition) {
+    public void advice(String condition) {
         if (condition.contains("rain") || condition.contains("storm")
                 || condition.contains("shower") || condition.contains("drizzle")) {
             weatherDescription.setText("The current weather is " + condition + ". Wear a raincoat!");
@@ -86,6 +91,16 @@ public class Weather extends AppCompatActivity {
             weatherDescription.setText("The current weather is " + condition + ". Wear something comfortable!");
         } else {
             weatherDescription.setText("The current weather is " + condition + ". Wear anything of your choice!");
+        }
+    }
+
+    public void tempAdvice(double temperature) {
+        if (temperature < 50) {
+            temperatureAdvice.setText("The temperature is " + temperature + ". Layer up!");
+        } else if (temperature < 70) {
+            temperatureAdvice.setText("The temperature is " + temperature + ". Enjoy the cool weather!");
+        } else {
+            temperatureAdvice.setText("The temperature is " + temperature + ". Stay cool!");
         }
     }
 
