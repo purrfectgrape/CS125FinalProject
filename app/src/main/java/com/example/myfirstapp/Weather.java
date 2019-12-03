@@ -24,9 +24,6 @@ public class Weather extends AppCompatActivity {
     /** Variable to hold the temperature from weather data. */
     private double temperature;
 
-    /** Variable to hold the wind speed from weather data. */
-    private double windSpeed;
-
     /** TextView to hold weather's description. */
     private TextView weatherDescription;
 
@@ -36,7 +33,6 @@ public class Weather extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
         weatherDescription = (TextView) findViewById(R.id.description);
         getWeather();
-        Log.d("oncreate", "starting getweather function");
     }
 
     /**
@@ -44,24 +40,18 @@ public class Weather extends AppCompatActivity {
      * https://www.youtube.com/watch?v=8-7Ip6xum6E.
      */
     public void getWeather() {
-        Log.d("entering", "starting getweather function");
 
         JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET,
                 URL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    Log.d("entering", "working on getweather function");
                     JSONObject mainOb = response.getJSONObject("main");
                     temperature = mainOb.getDouble("temp");
                     JSONArray weatherArray = response.getJSONArray("weather");
                     JSONObject weatherOb = weatherArray.getJSONObject(0);
                     String descriptionString = weatherOb.getString("description");
-                    JSONObject wind = response.getJSONObject("wind");
-                    windSpeed = wind.getDouble("wind");
                     weatherDescription.setText(descriptionString);
-                    Log.d("WIND", String.valueOf(windSpeed));
-                    Log.d("TEMPERATURE", String.valueOf(temperature));
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -70,7 +60,7 @@ public class Weather extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-        //        error.printStackTrace();
+                error.printStackTrace();
             }
         });
         RequestQueue newRequest = Volley.newRequestQueue(this);
