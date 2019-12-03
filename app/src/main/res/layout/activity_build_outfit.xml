@@ -4,41 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/beach"
     tools:context=".BuildOutfit">
 
     <LinearLayout
         android:id="@+id/topLayout"
-        android:background="@android:color/holo_blue_light"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="48dp">
+        android:gravity="top|right"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-137dp">
 
-        <ImageButton
+        <Button
             android:id="@+id/mood"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="mood"
-            android:src="@drawable/mood" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/roundedbutton"
+            android:gravity="center"
+            android:text="@string/mood" />
 
-        <ImageButton
+        <Button
             android:id="@+id/weather"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:contentDescription="weather"
-            android:src="@drawable/weather" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/roundedbutton"
+            android:gravity="center"
+            android:text="@string/weather" />
 
     </LinearLayout>
 
