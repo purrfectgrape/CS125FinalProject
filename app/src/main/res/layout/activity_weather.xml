@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@drawable/rain"
     tools:context=".Weather">
 
     <LinearLayout
@@ -21,7 +21,12 @@
             android:layout_width="0dp"
             android:layout_height="111dp"
             android:layout_weight="1"
-            android:text="hey"
             android:visibility="visible" />
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

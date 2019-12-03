@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -24,8 +28,13 @@ public class Weather extends AppCompatActivity {
     /** Variable to hold the temperature from weather data. */
     private double temperature;
 
+    private String[] cityNames = {"Urbana", "Champaign", "Other"};
+
     /** TextView to hold weather's description. */
     private TextView weatherDescription;
+
+    /** Spinner to store a dropdown of cities. */
+    private Spinner citySpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +60,7 @@ public class Weather extends AppCompatActivity {
                     JSONArray weatherArray = response.getJSONArray("weather");
                     JSONObject weatherOb = weatherArray.getJSONObject(0);
                     String descriptionString = weatherOb.getString("description");
-                    weatherDescription.setText(descriptionString);
+                    returnAdvice(descriptionString);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -66,4 +75,21 @@ public class Weather extends AppCompatActivity {
         RequestQueue newRequest = Volley.newRequestQueue(this);
         newRequest.add(objectRequest);
     }
+
+    public void returnAdvice(String condition) {
+        if (condition.contains("rain")) {
+            weatherDescription.setText("The current weather is " + condition + ". Wear a raincoat!");
+        } else if (condition.contains("wind")) {
+            weatherDescription.setText("The current weather is " + condition + ". Wear a windbreaker!");
+        } else if (condition.contains("snow")) {
+            weatherDescription.setText("The current weather is " + condition + ". Bring your snowboots!");
+        } else if (condition.contains("sun")) {
+            weatherDescription.setText("The current weather is " + condition + ". Don't forget sunblock!");
+        } else if (condition.contains("cloud")) {
+            weatherDescription.setText("The current weather is " + condition + ". Wear something comfortable!");
+        } else {
+            weatherDescription.setText("The current weather is " + condition + ". Wear anything of your choice!");
+        }
+    }
+
 }
