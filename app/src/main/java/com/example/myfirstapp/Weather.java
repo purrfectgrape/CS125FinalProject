@@ -73,7 +73,8 @@ public class Weather extends AppCompatActivity {
     }
 
     public void returnAdvice(String condition) {
-        if (condition.contains("rain")) {
+        if (condition.contains("rain") || condition.contains("storm")
+                || condition.contains("shower") || condition.contains("drizzle")) {
             weatherDescription.setText("The current weather is " + condition + ". Wear a raincoat!");
         } else if (condition.contains("wind")) {
             weatherDescription.setText("The current weather is " + condition + ". Wear a windbreaker!");
@@ -81,7 +82,7 @@ public class Weather extends AppCompatActivity {
             weatherDescription.setText("The current weather is " + condition + ". Bring your snowboots!");
         } else if (condition.contains("sun")) {
             weatherDescription.setText("The current weather is " + condition + ". Don't forget sunblock!");
-        } else if (condition.contains("cloud")) {
+        } else if (condition.contains("cloud") || condition.contains("clear")) {
             weatherDescription.setText("The current weather is " + condition + ". Wear something comfortable!");
         } else {
             weatherDescription.setText("The current weather is " + condition + ". Wear anything of your choice!");
