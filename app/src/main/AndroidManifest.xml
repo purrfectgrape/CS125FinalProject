@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyCloset"></activity>
+        <activity android:name=".Mood"></activity>
+        <activity android:name=".MyCloset" />
         <activity android:name=".Weather" />
         <activity android:name=".OutfitLogbook" />
         <activity android:name=".BuildOutfit" />

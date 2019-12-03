@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="@drawable/rain"
     tools:context=".Weather">
 
     <LinearLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="bottom"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-53dp">
 
@@ -21,6 +21,27 @@
             android:layout_width="0dp"
             android:layout_height="111dp"
             android:layout_weight="1"
+            android:gravity="bottom"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            app:fontFamily="sans-serif-medium"
             android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/temperatureAdvice"
+            android:layout_width="0dp"
+            android:layout_height="111dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            app:fontFamily="sans-serif-medium"
+            android:visibility="visible" />
+
+        <Spinner
+            android:id="@+id/citySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
