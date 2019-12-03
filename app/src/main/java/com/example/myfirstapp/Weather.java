@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
 
+import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -18,7 +19,7 @@ import org.json.JSONObject;
 public class Weather extends AppCompatActivity {
 
     /** The URL of the weather query result. */
-    static final String URL = "http://api.openweathermap.org/data/2.5/weather?id=4914570&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
+    private final String URL = "http://api.openweathermap.org/data/2.5/weather?id=4914570&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
 
     /** Variable to hold the temperature from weather data. */
     private double temperature;
@@ -35,6 +36,7 @@ public class Weather extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
         weatherDescription = (TextView) findViewById(R.id.description);
         getWeather();
+        Log.d("oncreate", "starting getweather function");
     }
 
     /**
@@ -42,12 +44,14 @@ public class Weather extends AppCompatActivity {
      * https://www.youtube.com/watch?v=8-7Ip6xum6E.
      */
     public void getWeather() {
+        Log.d("entering", "starting getweather function");
 
-        JsonObjectRequest objectRequest = new JsonObjectRequest(JsonObjectRequest.Method.GET,
+        JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET,
                 URL, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
+                    Log.d("entering", "working on getweather function");
                     JSONObject mainOb = response.getJSONObject("main");
                     temperature = mainOb.getDouble("temp");
                     JSONArray weatherArray = response.getJSONArray("weather");
@@ -56,17 +60,17 @@ public class Weather extends AppCompatActivity {
                     JSONObject wind = response.getJSONObject("wind");
                     windSpeed = wind.getDouble("wind");
                     weatherDescription.setText(descriptionString);
+                    Log.d("WIND", String.valueOf(windSpeed));
+                    Log.d("TEMPERATURE", String.valueOf(temperature));
                 } catch (Exception e) {
-                    System.out.println(e);
-                    Log.d("exception", "this is me");
+                    e.printStackTrace();
                 }
                 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("WTF", "wohoo");
-                error.printStackTrace();
+        //        error.printStackTrace();
             }
         });
         RequestQueue newRequest = Volley.newRequestQueue(this);
