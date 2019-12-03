@@ -1,39 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--The images are taken from Pixabay-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <LinearLayout
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@android:color/holo_blue_light"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <!--The image is from <a href="https://pixabay.com/users/La_Petite_Femme-2212305/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2150834">MJ Jin</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2150834">Pixabay</a>-->
         <Button
             android:id="@+id/myCloset"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:background="#00882D2D"
-            android:drawableTop="@mipmap/ic_launcher_round"
+            android:background="@drawable/clothes"
+            android:gravity="bottom|right"
             android:text="@string/mycloset" />
 
+        <!--The image is from https://pixabay.com/vectors/dresses-black-short-clothing-dummy-155838/-->
         <Button
             android:id="@+id/buildOutfit"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:drawableTop="@mipmap/ic_launcher_round"
+            android:background="@drawable/dresses"
+            android:gravity="bottom|right"
             android:text="@string/buildoutfit" />
 
+        <!--The image is from Image by <a href="https://pixabay.com/users/TheVirtualDenise-5804203/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Denise Husted</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Pixabay</a>-->
         <Button
             android:id="@+id/outfitLogbook"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:drawableTop="@mipmap/ic_launcher"
+            android:background="@drawable/converse"
+            android:gravity="bottom|right"
             android:text="@string/outfitlogbook" />
 
         <TextView
