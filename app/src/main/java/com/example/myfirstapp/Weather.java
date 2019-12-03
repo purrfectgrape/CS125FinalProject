@@ -80,17 +80,17 @@ public class Weather extends AppCompatActivity {
     public void advice(String condition) {
         if (condition.contains("rain") || condition.contains("storm")
                 || condition.contains("shower") || condition.contains("drizzle")) {
-            weatherDescription.setText("The current weather is " + condition + ". Wear a raincoat!");
+            weatherDescription.setText("The weather description says " + condition + ". Wear a raincoat!");
         } else if (condition.contains("wind")) {
-            weatherDescription.setText("The current weather is " + condition + ". Wear a windbreaker!");
+            weatherDescription.setText("The weather description says " + condition + ". Wear a windbreaker!");
         } else if (condition.contains("snow")) {
-            weatherDescription.setText("The current weather is " + condition + ". Bring your snowboots!");
+            weatherDescription.setText("The weather description says " + condition + ". Bring your snowboots!");
         } else if (condition.contains("sun")) {
-            weatherDescription.setText("The current weather is " + condition + ". Don't forget sunblock!");
+            weatherDescription.setText("The weather description says " + condition + ". Don't forget sunblock!");
         } else if (condition.contains("cloud") || condition.contains("clear")) {
-            weatherDescription.setText("The current weather is " + condition + ". Wear something comfortable!");
+            weatherDescription.setText("The weather description says " + condition + ". Wear something comfortable!");
         } else {
-            weatherDescription.setText("The current weather is " + condition + ". Wear anything of your choice!");
+            weatherDescription.setText("The weather description says " + condition + ". Wear anything of your choice!");
         }
     }
 
