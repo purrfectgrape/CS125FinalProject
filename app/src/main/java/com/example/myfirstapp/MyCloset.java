@@ -40,8 +40,32 @@ public class MyCloset extends AppCompatActivity {
             }
         });
 
+        bottomsButton = (Button) findViewById(R.id.bottomsButton);
+        shoesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyBottoms();
+            }
+        });
 
+        topsButton = (Button) findViewById(R.id.topsButton);
+        topsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyTop();
+            }
+        });
 
+        outerWearButton = (Button) findViewById(R.id.outerWearButton);
+        outerWearButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openOuterWear();
+            }
+        });
+
+        hatsButton = (Button) findViewById(R.id.hatsButton);
+        hatsButton.setOnClickListener();
 
     }
 
@@ -51,6 +75,26 @@ public class MyCloset extends AppCompatActivity {
     public void openMyShoes() {
         Intent intentOpenMyShoes = new Intent(this, Shoes.class);
         startActivity(intentOpenMyShoes);
+    }
+
+    public void openMyBottoms() {
+        Intent intentOpenMyButtoms = new Intent(this, Bottoms.class);
+        startActivity(intentOpenMyButtoms);
+    }
+
+    public void openMyTop() {
+        Intent intentOpenMyTops = new Intent(this, Tops.class);
+        startActivity(intentOpenMyTops);
+    }
+
+    public void openOuterWear() {
+        Intent intentOpenOuterWear = new Intent(this, OuterWear.class);
+        startActivity(intentOpenOuterWear);
+    }
+
+    public void openMyHats() {
+        Intent intentOpenMyHats = new Intent(this, Hats.class);
+        startActivity(intentOpenMyHats);
     }
 
 
