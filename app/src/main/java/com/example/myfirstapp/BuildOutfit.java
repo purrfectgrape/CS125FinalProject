@@ -14,7 +14,7 @@ public class BuildOutfit extends AppCompatActivity {
      * Button weather - reference to the weather Button.
      * Picture was taken from https://www.iconfinder.com/icons/3840014/cloud_color_icons_snow_sun_weather_icon.
      */
-    private ImageButton weatherButton;
+    private Button weatherButton;
 
     /**
      * Button mood - reference to the mood Button.
@@ -27,7 +27,7 @@ public class BuildOutfit extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_build_outfit);
 
-        weatherButton = (ImageButton) findViewById(R.id.weather);
+        weatherButton = (Button) findViewById(R.id.weather);
         weatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
