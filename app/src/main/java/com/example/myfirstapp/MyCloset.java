@@ -65,7 +65,30 @@ public class MyCloset extends AppCompatActivity {
         });
 
         hatsButton = (Button) findViewById(R.id.hatsButton);
-        hatsButton.setOnClickListener();
+        hatsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyHats();
+            }
+        });
+
+
+        accessoriesButton = (Button) findViewById(R.id.accessoriesButton);
+        accessoriesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyAccessories();
+            }
+        });
+
+        drawersButton = (Button) findViewById(R.id.drawersButton);
+        drawersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openMyDrawers();
+            }
+        });
+
 
     }
 
@@ -95,6 +118,16 @@ public class MyCloset extends AppCompatActivity {
     public void openMyHats() {
         Intent intentOpenMyHats = new Intent(this, Hats.class);
         startActivity(intentOpenMyHats);
+    }
+
+    public void openMyAccessories() {
+        Intent intentOpenMyAccessories = new Intent(this, Accessories.class);
+        startActivity(intentOpenMyAccessories);
+    }
+
+    public void openMyDrawers() {
+        Intent intentOpenMyDrawers = new Intent(this, Drawers.class);
+        startActivity(intentOpenMyDrawers);
     }
 
 
