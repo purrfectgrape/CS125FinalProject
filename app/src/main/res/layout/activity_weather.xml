@@ -11,8 +11,8 @@
         android:id="@+id/mainLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
         android:orientation="horizontal"
+        android:gravity="bottom"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-53dp">
 
@@ -21,6 +21,7 @@
             android:layout_width="0dp"
             android:layout_height="111dp"
             android:layout_weight="1"
+            android:gravity="bottom"
             android:visibility="visible" />
 
         <Spinner
