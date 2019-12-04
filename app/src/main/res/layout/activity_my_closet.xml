@@ -4,53 +4,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyCloset">
+    tools:context=".MyCloset"
+    android:background="@drawable/ClosetBackgroundDrawabale">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:gravity="center">
 
         <Button
             android:id="@+id/drawersButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Drawers" />
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Drawers"
+            android:background="@android:color/holo_red_dark"
+            />
 
         <Button
             android:id="@+id/accessoriesButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Accessories" />
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="Accessories"
+            android:background="@android:color/holo_blue_bright"/>
 
         <Button
             android:id="@+id/hatsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:text="Hats" />
 
         <Button
             android:id="@+id/outerWearButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:text="Outer Wear" />
 
         <Button
             android:id="@+id/topsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:text="Tops" />
 
         <Button
             android:id="@+id/bottomsButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:text="Bottoms" />
 
         <Button
             android:id="@+id/shoeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
             android:text="Shoes" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
