@@ -22,7 +22,8 @@
             android:layout_height="150dp"
             android:background="@drawable/neckties"
             android:gravity="bottom|right"
-            android:text="@string/mycloset" />
+            android:text="@string/mycloset"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <!--The image is from https://pixabay.com/vectors/dresses-black-short-clothing-dummy-155838/-->
         <Button
@@ -31,7 +32,8 @@
             android:layout_height="150dp"
             android:background="@drawable/dresses"
             android:gravity="bottom|right"
-            android:text="@string/buildoutfit" />
+            android:text="@string/buildoutfit"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <!--The image is from Image by <a href="https://pixabay.com/users/TheVirtualDenise-5804203/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Denise Husted</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Pixabay</a>-->
         <Button
@@ -40,7 +42,8 @@
             android:layout_height="150dp"
             android:background="@drawable/converse"
             android:gravity="bottom|right"
-            android:text="@string/outfitlogbook" />
+            android:text="@string/outfitlogbook"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <TextView
             android:id="@+id/stylistImage"
@@ -50,6 +53,7 @@
             android:clickable="false"
             android:text="@string/stylist"
             android:textSize="60sp"
+            android:textStyle="italic"
             app:fontFamily="sans-serif-black" />
 
     </LinearLayout>
