@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MyCloset"
-    android:background="@drawable/blackClosetForMyClosetUI">
+    android:background="@drawable/blackclosetformyclosetui">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,7 +19,8 @@
             android:layout_height="80dp"
             android:text="Drawers"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@android:color/holo_purple"/>
+            android:backgroundTint="@android:color/holo_purple"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/accessoriesButton"
@@ -27,7 +28,8 @@
             android:layout_height="80dp"
             android:text="Accessories"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@android:color/holo_red_light"/>
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/hatsButton"
@@ -35,7 +37,8 @@
             android:layout_height="80dp"
             android:text="Hats"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@color/colorPrimary"/>
+            android:backgroundTint="@color/colorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/outerWearButton"
@@ -43,7 +46,8 @@
             android:layout_height="80dp"
             android:text="Outer Wear"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@android:color/holo_blue_light"/>
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/topsButton"
@@ -51,7 +55,8 @@
             android:layout_height="80dp"
             android:text="Tops"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@color/colorAccent"/>
+            android:backgroundTint="@color/colorAccent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/bottomsButton"
@@ -59,14 +64,16 @@
             android:layout_height="80dp"
             android:text="Bottoms"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@color/design_default_color_primary"/>
+            android:backgroundTint="@color/design_default_color_primary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/shoeButton"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:text="Shoes"
             android:background="@drawable/roundedbutton"
-            android:backgroundTint="@android:color/holo_orange_light"/>
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="Shoes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
