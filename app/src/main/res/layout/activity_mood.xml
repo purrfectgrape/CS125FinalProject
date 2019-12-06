@@ -12,11 +12,21 @@
         android:background="@android:color/holo_blue_light"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/image"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+            android:text="@string/search" />
+
+        <EditText
+            android:id="@+id/textBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="street clothing"
+            android:maxLines="1"
+            android:lines="1"
+            android:textColorHighlight="#7cff88"
+            android:inputType="text">
+        </EditText>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

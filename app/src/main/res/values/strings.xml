@@ -12,6 +12,7 @@
     <string name="drawers">My Drawer</string>
     <string name="shoes">My Shoes</string>
     <string name="mood">How are you feeling today?</string>
+    <string name="search">Please enter your outfit search</string>
     <string name="weather">I want to dress right for the weather</string>
     <string name="back">Back</string>
 </resources>
