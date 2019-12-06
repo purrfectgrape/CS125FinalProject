@@ -1,6 +1,8 @@
 package com.example.myfirstapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -15,6 +17,8 @@ public class Mood extends AppCompatActivity {
 
     private EditText textBox;
     private String searchContent;
+    private String[] searchTokens;
+    private final String BASEURL = "https://www.pinterest.com/search/boards/?q=";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,8 @@ public class Mood extends AppCompatActivity {
         setContentView(R.layout.activity_mood);
         addKeyListener();
         searchContent = textBox.getEditableText().toString();
+        String uRLToSearch = toURL(searchContent);
+        Log.d("URL", uRLToSearch);
     }
 
     public void addKeyListener() {
@@ -32,7 +38,6 @@ public class Mood extends AppCompatActivity {
         textBox.setOnKeyListener(new View.OnKeyListener()  {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
 
-                // if keydown and "enter" is pressed
                 if ((event.getAction() == KeyEvent.ACTION_DOWN)
                         && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // display a floating message
@@ -44,6 +49,16 @@ public class Mood extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public String toURL(String searchText) {
+        searchTokens = searchText.trim().split(" ");
+        String uRL = BASEURL;
+        for (String token : searchTokens) {
+            uRL = uRL + token + "%20";
+        }
+        uRL =  uRL + "&rs=filter";
+        return uRL;
     }
 
     // Input the searchContent into a Pinterest URL and parse its HTML.

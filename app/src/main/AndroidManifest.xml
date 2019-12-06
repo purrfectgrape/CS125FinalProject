@@ -15,8 +15,10 @@
         <activity android:name=".Mood">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="pdk{5069749331662255099}" />
             </intent-filter>
         </activity>
