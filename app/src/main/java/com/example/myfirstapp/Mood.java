@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ImageView;
 
@@ -15,6 +16,7 @@ import com.squareup.picasso.Picasso;
 
 public class Mood extends AppCompatActivity {
 
+    private TextView requestBox;
     private EditText textBox;
     private String searchContent;
     private String[] searchTokens;
@@ -24,6 +26,10 @@ public class Mood extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mood);
+        textBox = (EditText) findViewById(R.id.textBox);
+        requestBox = (TextView) findViewById(R.id.requestForInput);
+        requestBox.setVisibility(View.VISIBLE);
+        textBox.setVisibility(View.VISIBLE);
         addKeyListener();
         searchContent = textBox.getEditableText().toString();
         String uRLToSearch = toURL(searchContent);
@@ -31,8 +37,6 @@ public class Mood extends AppCompatActivity {
     }
 
     public void addKeyListener() {
-
-        textBox = (EditText) findViewById(R.id.textBox);
 
         // add a keylistener to keep track of user input
         textBox.setOnKeyListener(new View.OnKeyListener()  {
@@ -43,6 +47,8 @@ public class Mood extends AppCompatActivity {
                     // display a floating message
                     Toast.makeText(Mood.this,
                             textBox.getText(), Toast.LENGTH_LONG).show();
+                    textBox.setVisibility(View.GONE);
+                    requestBox.setVisibility(View.GONE);
                     return true;
 
                 }
@@ -61,10 +67,6 @@ public class Mood extends AppCompatActivity {
         return uRL;
     }
 
-    // Input the searchContent into a Pinterest URL and parse its HTML.
-
-    // plan: Have the user input their mood and concatenate their search to:
-    // https://www.pinterest.com/search/boards/?q=summer%20fashion&rs=filter
     // Use JSoup to parse HTML and get images, populate the images to ImageView of the page.
     // // JSoup Example 2 - Reading HTML page from URL Document doc;
     // try { doc = Jsoup.connect("http://google.com/").get();
