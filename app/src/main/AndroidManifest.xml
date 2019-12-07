@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Mood"></activity>
+        <activity android:name=".Mood">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="pdk{5069749331662255099}" />
+            </intent-filter>
+        </activity>
         <activity android:name=".MyCloset" />
         <activity android:name=".Weather" />
         <activity android:name=".OutfitLogbook" />
