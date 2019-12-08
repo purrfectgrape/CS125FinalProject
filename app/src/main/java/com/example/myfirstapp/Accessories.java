@@ -9,6 +9,7 @@ import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
@@ -19,7 +20,7 @@ public class Accessories extends AppCompatActivity {
 
     private Button addButton;
     private LinearLayout myLayout;
-    private ImageView image;
+    private ImageButton image;
 
 
     @Override
@@ -28,7 +29,7 @@ public class Accessories extends AppCompatActivity {
         setContentView(R.layout.activity_accessories);
 
         addButton = (Button) findViewById(R.id.addButton);
-        image = (ImageView) findViewById(R.id.imageView);
+        image = (ImageButton) findViewById(R.id.imageView);
         myLayout=(LinearLayout)findViewById(R.id.layout);
 
         addButton.setOnClickListener(new View.OnClickListener() {
@@ -38,13 +39,20 @@ public class Accessories extends AppCompatActivity {
                 startActivityForResult(cameraIntent, CAMERA_REQUEST);
             }
         });
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                image.setVisibility(View.GONE);
+            }
+        });
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
             Bitmap photo = (Bitmap) data.getExtras().get("data");
-            image = new ImageView(this);
+            image = new ImageButton(this);
             LayoutParams param = new LayoutParams(300, 300);
             image.setLayoutParams(param);
             image.setImageBitmap(photo);

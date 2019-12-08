@@ -18,19 +18,23 @@
 
         <Button
             android:id="@+id/mood"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:text="Outfit Search"
+            android:layout_gravity="center"
             android:background="@drawable/roundedbutton"
-            android:gravity="center"
-            android:text="@string/mood" />
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
             android:id="@+id/weather"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:text="Dress for the Weather"
+            android:layout_gravity="center"
             android:background="@drawable/roundedbutton"
-            android:gravity="center"
-            android:text="@string/weather" />
+            android:backgroundTint="@android:color/holo_green_light"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
     </LinearLayout>
 

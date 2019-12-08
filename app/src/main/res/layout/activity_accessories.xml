@@ -12,23 +12,22 @@
         android:layout_height="match_parent"
         android:background="@android:color/holo_blue_light"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="118dp">
 
-        <ImageView
+        <ImageButton
             android:id="@+id/imageView"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:gravity="center"
-            tools:layout_editor_absoluteX="68dp"
-            tools:layout_editor_absoluteY="0dp"
+            android:text="REMOVE ACCESSORIES"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <Button
             android:id="@+id/addButton"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:text="@string/addAccessories" />
 
         <LinearLayout
