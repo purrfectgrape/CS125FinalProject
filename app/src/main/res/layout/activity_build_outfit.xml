@@ -8,7 +8,7 @@
     tools:context=".BuildOutfit">
 
     <LinearLayout
-        android:id="@+id/topLayout"
+        android:id="@+id/bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -20,7 +20,7 @@
             android:id="@+id/mood"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:text="Outfit Search"
+            android:text="@string/search"
             android:layout_gravity="center"
             android:background="@drawable/roundedbutton"
             android:backgroundTint="@android:color/holo_orange_light"
@@ -30,7 +30,7 @@
             android:id="@+id/weather"
             android:layout_width="300dp"
             android:layout_height="80dp"
-            android:text="Dress for the Weather"
+            android:text="@string/weather"
             android:layout_gravity="center"
             android:background="@drawable/roundedbutton"
             android:backgroundTint="@android:color/holo_green_light"

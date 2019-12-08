@@ -7,7 +7,7 @@
     tools:context=".OutfitLogbook">
 
     <LinearLayout
-        android:id="@+id/topLayout"
+        android:id="@+id/bottomLayout"
         android:background="@android:color/holo_blue_light"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -19,6 +19,7 @@ public class Accessories extends AppCompatActivity {
     private static final int CAMERA_REQUEST = 1888;
 
     private Button addButton;
+    private Button removeButton;
     private LinearLayout myLayout;
     private ImageButton image;
 
@@ -29,8 +30,10 @@ public class Accessories extends AppCompatActivity {
         setContentView(R.layout.activity_accessories);
 
         addButton = (Button) findViewById(R.id.addButton);
+        removeButton = (Button) findViewById(R.id.removeButton);
         image = (ImageButton) findViewById(R.id.imageView);
-        myLayout=(LinearLayout)findViewById(R.id.layout);
+        myLayout = (LinearLayout) findViewById(R.id.layout);
+        image.setVisibility(View.INVISIBLE);
 
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,10 +43,10 @@ public class Accessories extends AppCompatActivity {
             }
         });
 
-        image.setOnClickListener(new View.OnClickListener() {
+        removeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                image.setVisibility(View.GONE);
+                myLayout.removeView(image);
             }
         });
     }

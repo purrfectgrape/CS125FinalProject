@@ -11,9 +11,8 @@
     <string name="accessories">My Accessories</string>
     <string name="drawers">My Drawer</string>
     <string name="shoes">My Shoes</string>
-    <string name="mood">Outfit Search</string>
-    <string name="search">Please enter your outfit search</string>
+    <string name="search">Outfit Search</string>
     <string name="weather">Dress for the Weather</string>
-    <string name="addAccessories">ADD ACCESSORIES</string>
-    <string name="back">Back</string>
+    <string name="addItem">Add an item</string>
+    <string name="removeItem">Remove an item</string>
 </resources>
