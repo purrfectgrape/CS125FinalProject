@@ -19,6 +19,8 @@ public class Clothing extends AppCompatActivity {
     private String color;
     private String name;
 
+    private Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
     private Map<String, ImageView> clothingMaplist = new HashMap<String, ImageView>();
 
 
