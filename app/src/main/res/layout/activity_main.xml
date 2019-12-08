@@ -45,6 +45,14 @@
             android:textStyle="italic"
             app:fontFamily="sans-serif-black" />
 
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:text="@string/signing" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,9 +12,10 @@
     <string name="drawers">My Drawer</string>
     <string name="shoes">My Shoes</string>
     <string name="search">Outfit Search</string>
-    <string name="look">What are you looking for?</string>
+    <string name="look">What style are you interested in?</string>
     <string name="city">Tell me your city?</string>
     <string name="weather">Dress for the Weather</string>
     <string name="addItem">Add an item</string>
     <string name="removeItem">Remove an item</string>
+    <string name="signing">An app by Giang Le and Rohit Rahim</string>
 </resources>
