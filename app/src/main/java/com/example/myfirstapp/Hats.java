@@ -3,6 +3,7 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -16,6 +17,8 @@ import java.util.Map;
 public class Hats extends Clothing {
 
     private Map<Clothing, ImageView> hatMapList = new HashMap<>();
+
+    private Map<Clothing, >
 
     //ImageView hatImage =
 
@@ -62,6 +65,18 @@ public class Hats extends Clothing {
     public void removeHatsFromMap(Clothing cloth, ImageView clothImaage) {
         hatMapList.remove(cloth, clothImaage);
 
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView toReturnimageView = findViewById(R.id.imageView);
+            toReturnimageView.setImageBitmap(imageBitmap);
+        }
     }
 
 
