@@ -23,7 +23,7 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:textStyle="bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:fontFamily="sans-serif-medium"
             android:visibility="visible" />
 
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:gravity="bottom"
             android:textStyle="bold"
-            android:textSize="15dp"
+            android:textSize="15sp"
             app:fontFamily="sans-serif-medium"
             android:visibility="visible" />
 

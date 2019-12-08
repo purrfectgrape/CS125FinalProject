@@ -31,7 +31,6 @@
         </activity>
         <activity android:name=".MyCloset" />
         <activity android:name=".Weather" />
-        <activity android:name=".OutfitLogbook" />
         <activity android:name=".BuildOutfit" />
         <activity android:name=".MainActivity">
             <intent-filter>

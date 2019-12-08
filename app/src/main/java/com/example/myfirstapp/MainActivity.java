@@ -46,15 +46,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        myOutfitLogbook = (Button) findViewById(R.id.outfitLogbook);
-        myOutfitLogbook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openOutfitLogbook();
-
-            }
-        });
     }
 
     public void openMyCloset() {
@@ -68,8 +59,4 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intentBuildOutfit);
     }
 
-    public void openOutfitLogbook() {
-        Intent intentOutfitLogBook = new Intent(this, OutfitLogbook.class);
-        startActivity(intentOutfitLogBook);
-    }
 }

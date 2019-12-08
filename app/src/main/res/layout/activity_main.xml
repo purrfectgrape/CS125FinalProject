@@ -18,8 +18,8 @@
         <!--The image is from <a href="https://pixabay.com/users/La_Petite_Femme-2212305/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2150834">MJ Jin</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2150834">Pixabay</a>-->
         <Button
             android:id="@+id/myCloset"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:background="@drawable/neckties"
             android:gravity="bottom|right"
             android:text="@string/mycloset"
@@ -28,28 +28,17 @@
         <!--The image is from https://pixabay.com/vectors/dresses-black-short-clothing-dummy-155838/-->
         <Button
             android:id="@+id/buildOutfit"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:background="@drawable/dresses"
             android:gravity="bottom|right"
             android:text="@string/buildoutfit"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
-
-        <!--The image is from Image by <a href="https://pixabay.com/users/TheVirtualDenise-5804203/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Denise Husted</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2485685">Pixabay</a>-->
-        <Button
-            android:id="@+id/outfitLogbook"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/converse"
-            android:gravity="bottom|right"
-            android:text="@string/outfitlogbook"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <TextView
             android:id="@+id/stylistImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:autoText="false"
             android:clickable="false"
             android:text="@string/stylist"
             android:textSize="60sp"
