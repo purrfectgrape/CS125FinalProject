@@ -1,8 +1,6 @@
 package com.example.myfirstapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.webkit.WebView;
@@ -10,20 +8,8 @@ import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.squareup.picasso.Picasso;
-
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Mood extends AppCompatActivity {
 
