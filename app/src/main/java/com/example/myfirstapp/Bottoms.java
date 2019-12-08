@@ -1,11 +1,14 @@
 package com.example.myfirstapp;
 
-import android.graphics.Color;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Bottoms extends Clothing {
+import android.os.Bundle;
 
-    Bottoms(String setType, String setColor, String setName) {
-        super(setType, setColor, setName);
+public class Bottoms extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bottoms);
     }
-
 }

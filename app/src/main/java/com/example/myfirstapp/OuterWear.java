@@ -1,10 +1,14 @@
 package com.example.myfirstapp;
 
-import android.graphics.Color;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class OuterWear extends Clothing {
+import android.os.Bundle;
 
-    OuterWear(String setType, String setColor, String setName) {
-        super(setType, setColor, setName);
+public class OuterWear extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_outerwear);
     }
 }

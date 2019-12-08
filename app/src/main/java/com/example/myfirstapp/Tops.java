@@ -1,10 +1,14 @@
 package com.example.myfirstapp;
 
-import android.graphics.Color;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class Tops extends Clothing {
+import android.os.Bundle;
 
-    Tops(String setType, String setColor, String setName) {
-        super(setType, setColor, setName);
+public class Tops extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_tops);
     }
 }

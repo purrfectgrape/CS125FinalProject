@@ -1,17 +1,14 @@
 package com.example.myfirstapp;
 
-import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
+import android.os.Bundle;
 
-public class Shoes extends Clothing {
+public class Shoes extends AppCompatActivity {
 
-    //List<Clothing>
-
-    Shoes(String type, String color, String setName) {
-        super(type, color, setName);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_shoes);
     }
-
-
-
 }

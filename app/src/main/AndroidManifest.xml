@@ -12,7 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".HatsActivity"></activity>
+        <activity android:name=".Drawers"></activity>
+        <activity android:name=".Accessories" />
+        <activity android:name=".Hats" />
+        <activity android:name=".OuterWear" />
+        <activity android:name=".Tops" />
+        <activity android:name=".Bottoms" />
+        <activity android:name=".Shoes" />
         <activity android:name=".Mood">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

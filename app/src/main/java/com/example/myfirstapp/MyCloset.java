@@ -19,9 +19,6 @@ public class MyCloset extends AppCompatActivity {
     private Button accessoriesButton;
     private Button drawersButton;
 
-    static final int REQUEST_IMAGE_CAPTURE = 1;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
