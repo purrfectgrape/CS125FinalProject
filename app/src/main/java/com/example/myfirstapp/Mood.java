@@ -5,14 +5,25 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Mood extends AppCompatActivity {
 
@@ -20,7 +31,8 @@ public class Mood extends AppCompatActivity {
     private EditText textBox;
     private String searchContent;
     private String[] searchTokens;
-    private final String BASEURL = "https://www.pinterest.com/search/boards/?q=";
+    private final String BASEURL = "https://www.google.com/search?q=";
+    private WebView webResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +44,11 @@ public class Mood extends AppCompatActivity {
         textBox.setVisibility(View.VISIBLE);
         addKeyListener();
         searchContent = textBox.getEditableText().toString();
-        String uRLToSearch = toURL(searchContent);
-        Log.d("URL", uRLToSearch);
+        final String uRLToSearch = toURL(searchContent);
+//        webResult = (WebView) findViewById(R.id.webResult);
+//        webResult.setWebViewClient(new WebViewClient());
+//        webResult.getSettings().setJavaScriptEnabled(true);
+//        webResult.loadUrl(BASEURL + searchContent);
     }
 
     public void addKeyListener() {
@@ -61,17 +76,9 @@ public class Mood extends AppCompatActivity {
         searchTokens = searchText.trim().split(" ");
         String uRL = BASEURL;
         for (String token : searchTokens) {
-            uRL = uRL + token + "%20";
+            uRL = uRL + "+" + token;
         }
-        uRL =  uRL + "&rs=filter";
         return uRL;
     }
 
-    // Use JSoup to parse HTML and get images, populate the images to ImageView of the page.
-    // // JSoup Example 2 - Reading HTML page from URL Document doc;
-    // try { doc = Jsoup.connect("http://google.com/").get();
-    // title = doc.title(); }
-    // catch (IOException e) { e.printStackTrace(); } System.out.println("Jsoup Can read HTML page from URL, title : " + title);
-    //
-    //Read more: https://javarevisited.blogspot.com/2014/09/how-to-parse-html-file-in-java-jsoup-example.html#ixzz67I3xgLm6
 }
