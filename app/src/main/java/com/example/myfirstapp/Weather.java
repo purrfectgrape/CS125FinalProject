@@ -3,8 +3,12 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.Spinner;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,12 +23,10 @@ import org.json.JSONObject;
 public class Weather extends AppCompatActivity {
 
     /** The URL of the weather query result. */
-    private final String URL = "http://api.openweathermap.org/data/2.5/weather?id=4914570&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
+    private String BASEURL = "http://api.openweathermap.org/data/2.5/weather?q=";
 
     /** Variable to hold the temperature from weather data. */
     private double temperature;
-
-    private String[] cityNames = {"Urbana", "Champaign", "Other"};
 
     /** TextView to hold weather's description. */
     private TextView weatherDescription;
@@ -32,8 +34,9 @@ public class Weather extends AppCompatActivity {
     /** TextView to hold advice based on the temperature. */
     private TextView temperatureAdvice;
 
-    /** Spinner to store a dropdown of cities. */
-    private Spinner citySpinner;
+    private TextView requestBox;
+    private EditText textBox;
+    private String URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,15 +44,39 @@ public class Weather extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
         weatherDescription = (TextView) findViewById(R.id.description);
         temperatureAdvice = (TextView) findViewById(R.id.temperatureAdvice);
-        getWeather();
+        textBox = (EditText) findViewById(R.id.textBox);
+        requestBox = (TextView) findViewById(R.id.requestForInput);
+        requestBox.setVisibility(View.VISIBLE);
+        textBox.setVisibility(View.VISIBLE);
+        addKeyListener();
     }
 
+    public void addKeyListener() {
+        // add a keylistener to keep track of user input
+        textBox.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+
+                if ((event.getAction() == KeyEvent.ACTION_DOWN)
+                        && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    URL = BASEURL + textBox.getEditableText().toString() + "&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
+                    Toast.makeText(Weather.this,
+                            textBox.getText(), Toast.LENGTH_LONG).show();
+                    textBox.setVisibility(View.GONE);
+                    requestBox.setVisibility(View.GONE);
+                    getWeather();
+                    return true;
+                }
+                return false;
+            }
+        });
+    }
     /**
      * Method to get weather info from openweathermap. This code was adapted from:
      * https://www.youtube.com/watch?v=8-7Ip6xum6E.
      */
     public void getWeather() {
-
+       // URL = BASEURL + textBox.getEditableText().toString() + "&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
+        Log.d("CHECKING URL", URL);
         JsonObjectRequest objectRequest = new JsonObjectRequest(Request.Method.GET,
                 URL, null, new Response.Listener<JSONObject>() {
             @Override
@@ -78,6 +105,7 @@ public class Weather extends AppCompatActivity {
     }
 
     public void advice(String condition) {
+        weatherDescription.setVisibility(View.VISIBLE);
         if (condition.contains("rain") || condition.contains("storm")
                 || condition.contains("shower") || condition.contains("drizzle")) {
             weatherDescription.setText("The weather description says " + condition + ". Wear a raincoat!");
@@ -95,6 +123,7 @@ public class Weather extends AppCompatActivity {
     }
 
     public void tempAdvice(double temperature) {
+        temperatureAdvice.setVisibility(View.VISIBLE);
         if (temperature < 50) {
             temperatureAdvice.setText("The temperature is " + temperature + ". Layer up!");
         } else if (temperature < 70) {
@@ -103,5 +132,6 @@ public class Weather extends AppCompatActivity {
             temperatureAdvice.setText("The temperature is " + temperature + ". Stay cool!");
         }
     }
+
 
 }

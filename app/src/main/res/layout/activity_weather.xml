@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rain"
+    android:background="@drawable/woman"
     tools:context=".Weather">
 
     <LinearLayout
@@ -12,36 +12,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:gravity="bottom"
+        android:gravity="center"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-53dp">
 
         <TextView
-            android:id="@+id/description"
-            android:layout_width="0dp"
-            android:layout_height="111dp"
-            android:layout_weight="1"
-            android:gravity="bottom"
-            android:textStyle="bold"
-            android:textSize="15sp"
-            app:fontFamily="sans-serif-medium"
-            android:visibility="visible" />
+            android:id="@+id/requestForInput"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="@string/city"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <EditText
+            android:id="@+id/textBox"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Tokyo"
+            android:maxLines="1"
+            android:lines="1"
+            android:textColorHighlight="#7cff88"
+            android:inputType="text">
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/temperatureAdvice"
-            android:layout_width="0dp"
-            android:layout_height="111dp"
+            android:layout_width="233dp"
+            android:layout_height="329dp"
             android:layout_weight="1"
             android:gravity="bottom"
+            android:textSize="30sp"
             android:textStyle="bold"
-            android:textSize="15sp"
-            app:fontFamily="sans-serif-medium"
-            android:visibility="visible" />
+            android:visibility="visible"
+            app:fontFamily="sans-serif-medium" />
 
-        <Spinner
-            android:id="@+id/citySpinner"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="228dp"
+            android:layout_height="200dp"
+            android:gravity="bottom"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:fontFamily="sans-serif-medium" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

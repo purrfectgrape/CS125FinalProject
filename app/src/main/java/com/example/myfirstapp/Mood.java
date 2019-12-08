@@ -1,5 +1,7 @@
 package com.example.myfirstapp;
 
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -28,7 +30,10 @@ public class Mood extends AppCompatActivity {
         requestBox = (TextView) findViewById(R.id.requestForInput);
         webResult = (WebView) findViewById(R.id.webResult);
         requestBox.setVisibility(View.VISIBLE);
+        requestBox.setTextColor(Color.WHITE);
+        requestBox.setTypeface(null, Typeface.BOLD);
         textBox.setVisibility(View.VISIBLE);
+        textBox.setTextColor(Color.WHITE);
         webResult.setVisibility(View.GONE);
         addKeyListener();
     }
