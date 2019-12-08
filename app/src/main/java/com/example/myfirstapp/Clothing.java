@@ -7,19 +7,28 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.ImageView;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.HashMap;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Clothing extends AppCompatActivity {
 
     private String type;
-    private Color color;
+    private String color;
+    private String name;
+
+    private Map<String, ImageView> clothingMaplist = new HashMap<String, ImageView>();
+
 
     static final int REQUEST_IMAGE_CAPTURE = 1;
 
-    public Clothing(String setType, Color setColor) {
+    public Clothing(String setType, String setColor, String setName) {
 
         type = setType;
         color = setColor;
+        name = setName;
 
     }
 
@@ -30,6 +39,23 @@ public class Clothing extends AppCompatActivity {
     public Color getColor() {
         return this.color;
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setType(String setType) {
+        type = setType;
+    }
+
+    public void setColor(Color setColor) {
+        color = setColor;
+    }
+
+    public void setName(String setName) {
+        name = setName;
+    }
+
 
 
     private void dispatchTakePictureIntent() {
@@ -45,14 +71,10 @@ public class Clothing extends AppCompatActivity {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            ImageView toReturnimageView;
+            ImageView toReturnimageView = findViewById(R.id.imageView);
             toReturnimageView.setImageBitmap(imageBitmap);
         }
     }
-
-
-
-
 
 
 }

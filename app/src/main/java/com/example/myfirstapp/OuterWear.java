@@ -4,7 +4,7 @@ import android.graphics.Color;
 
 public class OuterWear extends Clothing {
 
-    OuterWear(String setType, Color setColor) {
-        super(setType, setColor);
+    OuterWear(String setType, String setColor, String setName) {
+        super(setType, setColor, setName);
     }
 }
