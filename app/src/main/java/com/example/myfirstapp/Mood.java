@@ -47,7 +47,7 @@ public class Mood extends AppCompatActivity {
                         && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     // display a floating message
                     Toast.makeText(Mood.this,
-                            textBox.getText(), Toast.LENGTH_LONG).show();
+                            "Transferring you to Google Search...", Toast.LENGTH_LONG).show();
                     textBox.setVisibility(View.GONE);
                     requestBox.setVisibility(View.GONE);
                     webResult.setVisibility(View.VISIBLE);

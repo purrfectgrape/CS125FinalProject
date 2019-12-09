@@ -60,7 +60,8 @@ public class Weather extends AppCompatActivity {
                         && (keyCode == KeyEvent.KEYCODE_ENTER)) {
                     URL = BASEURL + textBox.getEditableText().toString() + "&APPID=57e68cf6582d83cfb852527e4c18e9e5&units=imperial";
                     Toast.makeText(Weather.this,
-                            textBox.getText(), Toast.LENGTH_LONG).show();
+                            "Getting fashion advice for " + textBox.getEditableText().toString(),
+                            Toast.LENGTH_LONG).show();
                     textBox.setVisibility(View.GONE);
                     requestBox.setVisibility(View.GONE);
                     getWeather();
