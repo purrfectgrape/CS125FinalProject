@@ -6,4 +6,50 @@
     android:layout_height="match_parent"
     tools:context=".OuterWear">
 
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/outerwear125"
+        android:gravity="center|bottom"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="118dp">
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center|bottom"
+            android:text="Add Outerwear" />
+
+        <Button
+            android:id="@+id/removeButton"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center|bottom"
+            android:text="Remove " />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="300dp">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+    <ImageButton
+        android:id="@+id/imageView"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:gravity="center|bottom"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
