@@ -51,5 +51,5 @@
         android:layout_height="80dp"
         android:gravity="center|bottom"/>
 
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

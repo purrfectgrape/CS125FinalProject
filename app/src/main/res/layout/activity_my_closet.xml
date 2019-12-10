@@ -59,7 +59,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
         <Button
-            android:id="@+id/bottomsButton"
+            android:id="@+id/boTTomsButton"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:text="Bottoms"

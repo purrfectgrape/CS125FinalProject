@@ -33,8 +33,8 @@ public class MyCloset extends AppCompatActivity {
             }
         });
 
-        bottomsButton = (Button) findViewById(R.id.bottomsButton);
-        shoesButton.setOnClickListener(new View.OnClickListener() {
+        bottomsButton = (Button) findViewById(R.id.boTTomsButton);
+        bottomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openMyBottoms();
